@@ -1,89 +1,129 @@
-import React, { useState } from 'react';
-import { BiSolidCctv } from 'react-icons/bi';
-import { AiOutlineClose } from 'react-icons/ai';
-import { HiMenuAlt1 } from 'react-icons/hi';
-import { NavLink } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link, useNavigate, NavLink } from "react-router-dom";
+import { BiSolidCctv } from 'react-icons/bi'
 
-const Navbar = () => {
-  const [toggle, setToggle] = useState(false);
+const SignUp = () => {
+  const [passwordHidden, setPasswordHidden] = useState(true);
+  const [confirmPassword, setConfirmPassword] = useState(true);
 
-  function closeMenu() {
-    setToggle(false);
-  }
+  const navigate = useNavigate();
 
-  function openMenu() {
-    setToggle(true);
-  }
+  const handleSubmit = () => {
+    navigate("/userinfo");
+  };
 
   return (
-    <>
-      <div className="flex items-center justify-between bg-opacity-95 px-4 sm:px-10 py-5 fixed w-full border-y-2 bg-orange-950 z-50">
-        <div>
-          <a href="#" className="flex text-white font-mono text-2xl tracking-wider items-center">
-            <BiSolidCctv className="text-orange-600 outline-2 mr-3 outline-double text-5xl p-1 outline-gray-200 rounded-full" />
-            JERRY-MEDIA
-          </a>
+    <div className="min-h-screen bg-orange-950 text-white flex items-center justify-center">
+      <div className="flex flex-col md:flex-row w-full max-w-6xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+        {/* Left Side (Image and Info) */}
+        <div className="w-full md:w-1/2 bg-orange-950 flex flex-col justify-center items-center p-8">
+          <Link to="/" className="text-3xl font-bold text-white mb-4 flex">
+          <BiSolidCctv className='text-orange-600 outline-2 mr-3 outline-double text-5xl p-1 outline-gray-200 rounded-full '/>
+          JERRY-MEDIA TECH
+          </Link>
+          <p className="text-primary text-center mb-6">
+            Your number one budgeting application. Create an account and let's get started...
+          </p>
+          <img
+            src="https://img.freepik.com/free-photo/free-trial-storage-member-concept_53876-119992.jpg?t=st=1723548410~exp=1723552010~hmac=f39a2fbac0803138063b723e0363f97bbffb7797e8dfe21c4f8842a78f94d9d3&w=740"
+            alt="Sign Up"
+            className="w-3/4 max-w-sm rounded-full object-cover"
+          />
         </div>
-        <div className="space-x-4">
-          <div className="hidden lg:flex space-x-2 border px-1 py-1 rounded-full pr-10 pl-10">
-            <a href="#" className="text-white hover:bg-black hover:text-white hover:border rounded-full px-5 py-2 font-semibold">
-              Home
-            </a>
-            <a href="#" className="text-white hover:bg-black hover:text-white hover:border rounded-full px-5 py-2 font-semibold">
-              About
-            </a>
-            <a href="#" className="text-white hover:bg-orange-800 hover:text-white hover:border rounded-full px-5 py-2 font-semibold">
-              Services
-            </a>
-            <a href="#" className="text-white hover:bg-black hover:text-white hover:border rounded-full px-5 py-2 font-semibold">
-              Products
-            </a>
-            <NavLink to="/SignUp">
-              <button className="bg-white font-semibold text-orange-950 px-10 py-2 rounded-full hover:bg-orange-950 hover:text-white hover:border">
-                Get in Touch
-              </button>
-            </NavLink>
-          </div>
 
-          {/* Mobile menu toggle */}
-          <div className="lg:hidden">
-            {toggle ? (
-              <AiOutlineClose
-                onClick={closeMenu}
-                size={30}
-                className="text-white cursor-pointer"
-              />
-            ) : (
-              <HiMenuAlt1
-                onClick={openMenu}
-                size={30}
-                className="text-white cursor-pointer"
-              />
-            )}
+        {/* Right Side (Form) */}
+        <div className="w-full md:w-1/2 p-8 md:p-16 bg-white text-black">
+          <div className="mb-6">
+            <p className="text-secondary text-xl">Get Started</p>
+            <p className="font-bold text-2xl mt-2">
+              Sign Up with JERRY-MEDIA TECH
+            </p>
           </div>
+          <form className="space-y-4">
+            <div className="relative">
+              <label className="text-gray-700">
+                Full Name <span className="text-red-400">*</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Name"
+                className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-appGrey text-black"
+                required
+              />
+              <span className="absolute right-4 top-8 text-purple-6">
+                {/* Icon */}
+              </span>
+            </div>
+            <div className="relative">
+              <label className="text-gray-700">
+                Email <span className="text-red-400">*</span>
+              </label>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-appGrey text-black"
+                required
+              />
+              <span className="absolute right-4 top-8 text-gray-500">
+                {/* Icon */}
+              </span>
+            </div>
+            <div className="relative">
+              <label className="text-gray-700">
+                Password <span className="text-red-400">*</span>
+              </label>
+              <input
+                type={passwordHidden ? "password" : "text"}
+                placeholder="Enter your password"
+                className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-appGrey text-black"
+                required
+              />
+              <span
+                className="absolute text-gray-500 right-4 top-8 cursor-pointer"
+                onClick={() => setPasswordHidden(!passwordHidden)}
+              >
+                {/* Toggle Password Visibility Icon */}
+              </span>
+            </div>
+            <div className="relative">
+              <label className="text-gray-700">
+                Confirm Password <span className="text-red-400">*</span>
+              </label>
+              <input
+                type={confirmPassword ? "password" : "text"}
+                placeholder="Re-enter your password"
+                className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-appGrey text-black"
+                required
+              />
+              <span
+                className="absolute text-gray-500 right-4 top-8 cursor-pointer"
+                onClick={() => setConfirmPassword(!confirmPassword)}
+              >
+                {/* Toggle Confirm Password Visibility Icon */}
+              </span>
+            </div>
+
+            <button
+              type="button"
+              className="w-full bg-orange-950 text-white py-3 rounded-lg mt-4 font-semibold hover:bg-orange-900 transition-colors"
+              onClick={handleSubmit}
+            >
+              Sign Up
+            </button>
+            <button className="w-full border border-gray-400 text-gray-800 py-3 rounded-lg mt-3 font-semibold hover:bg-gray-100 transition-colors">
+              <a href="">Sign In with Google</a>
+            </button>
+          </form>
+          <p className="mt-6 text-center text-gray-600">
+            Already have an account?{" "}
+            <NavLink to="/login" className="text-primary hover:underline">
+              Sign In
+            </NavLink>
+          </p>
         </div>
       </div>
-
-      {/* Mobile menu */}
-      <div
-        className={`lg:hidden bg-orange-950 bg-opacity-95 fixed top-0 left-0 w-full z-40 transition-transform duration-300 ease-in-out ${toggle ? 'translate-y-0' : '-translate-y-full'}`}
-      >
-        <div className="flex flex-col items-center justify-center space-y-4 py-10 max-h-[80vh] overflow-auto">
-          <ul className="text-center">
-            <li className="text-white text-2xl mb-4 cursor-pointer" onClick={closeMenu}>Home</li>
-            <li className="text-white text-2xl mb-4 cursor-pointer" onClick={closeMenu}>About</li>
-            <li className="text-white text-2xl mb-4 cursor-pointer" onClick={closeMenu}>Services</li>
-            <li className="text-white text-2xl mb-4 cursor-pointer" onClick={closeMenu}>Products</li>
-            <NavLink to="/SignUp" onClick={closeMenu}>
-              <li className="bg-white text-orange-950 font-semibold px-10 py-2 rounded-full hover:bg-orange-950 hover:text-white">
-                Get in Touch
-              </li>
-            </NavLink>
-          </ul>
-        </div>
-      </div>
-    </>
+    </div>
   );
 };
 
-export default Navbar;
+export default SignUp;

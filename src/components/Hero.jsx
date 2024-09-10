@@ -5,7 +5,7 @@ import { AiOutlineCaretRight } from 'react-icons/ai';
 
 const Hero = () => {
   return (
-    <section className='flex flex-wrap justify-center items-center pt-32 px-5 space-y-10 lg:space-y-0 lg:space-x-10 text-white'>
+    <section className='flex flex-wrap justify-center items-center pt-32 px-5 lg:pb-24 lg:pt-36 space-y-10 lg:space-y-0 lg:space-x-10 text-white'>
     <div className='lg:w-1/2 w-full animate-slide-in'>
       <p className='text-3xl font-bold mb-5 text-orange-600'>Welcome to</p>
       <h1 className='text-4xl lg:text-5xl animate-bounce-in'>JERRY-MEDIA TECH</h1>
