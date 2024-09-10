@@ -28,7 +28,7 @@ const Hero = () => {
       <a href="https://www.tiktok.com/@jerrymediatech?_t=8owSEwcnbHx&_r=1" className="text-white hover:text-orange-600 mr-4">
         <FaTwitter size={24} className="hover:animate-bounce" />
       </a>
-      <a href="#" className="text-white hover:text-orange-600 mr-4">
+      <a href="#" className="text-white hover:text-orange-00 mr-4">
         <FaLinkedin size={24} className="hover:animate-bounce" />
       </a>
       <a href="https://www.instagram.com/jerrymediatech?igsh=MW51dzRjcGd6cXcz" className="text-white hover:text-orange-600">

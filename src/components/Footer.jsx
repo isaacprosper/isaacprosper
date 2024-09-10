@@ -3,13 +3,13 @@ import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaTiktok } from 'react-
 
 const Footer = () => {
     return (
-        <footer className="bg-orange-950 text-white py-10">
-            <div className="container mx-auto px-6">
-                <div className="flex flex-col md:flex-row justify-between items-center">
-                    <div className="mb-6 md:mb-0">
-                        <h3 className="text-2xl font-semibold mb-2">Get in Touch</h3>
+        <footer className="bg-orange-950 text-white py-10 ">
+            <div className="container mx-auto px-6 ">
+                <div className="flex flex-col md:flex-row justify-between items-center ">
+                    <div className="mb-6 md:mb-0 ssm:text-center">
+                        <h3 className="text-2xl font-semibold mb-2 ">Get in Touch</h3>
                         <p className="mb-4">Subscribe to our newsletter to receive updates and offers:</p>
-                        <form className="flex">
+                        <form className="flex sm:pl-14 ssm:pl-8">
                             <input
                                 type="email"
                                 placeholder="Enter your email"
@@ -22,9 +22,9 @@ const Footer = () => {
                     </div>
                     <div className="text-center md:text-left">
                         <h3 className="text-2xl font-semibold mb-2">Contact Us</h3>
-                        <p>Email: jerrymediatech45@gmail.com</p>
-                        <p>Phone: +1237064650390 / +234907900404</p>
-                        <p>Address: 123 CCTV St, Tech City</p>
+                        <p><strong>Email:</strong> jerrymediatech45@gmail.com</p>
+                        <p><strong>Phone:</strong><a href="tel:+2347064650390">+2347064650390</a> <br /><a href="tel:+234907900404">+234907900404</a></p>
+                        <p><strong>Address:</strong> 123 CCTV St, Tech City</p>
                         <div className="flex mt-4 justify-center md:justify-start">
                             <a href="https://www.facebook.com/jerrymediatech" className="text-white hover:text-orange-600 mr-4">
                                 <FaFacebook size={24} />
