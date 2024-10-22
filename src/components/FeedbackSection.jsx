@@ -27,7 +27,7 @@ const testimonialsData = [
     currentComment: '',
   },
   {
-    id: 2,
+    id: 3,
     name: 'Jane Smith',
     avatar: 'https://randomuser.me/api/portraits/men/44.jpg',
     message: 'The quality of service is beyond my expectations!',
