@@ -6,6 +6,7 @@ import WhyChooseUs from './components/WhyChooseUs'
 import SecurityFeatures from './components/SecurityFeatures'
 import AboutUs from './components/AboutUs'
 import Carousel from './components/Carousel'
+import FeedbackSection from './components/FeedbackSection'
 
 
 
@@ -18,6 +19,7 @@ const Landing = () => {
         <WhyChooseUs />
         <AboutUs />
         <Carousel/>
+        <FeedbackSection/>
         <Footer />
     </div>
   )

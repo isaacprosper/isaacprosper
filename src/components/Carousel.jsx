@@ -15,7 +15,7 @@ const cameras = [
     { id: 4, name: 'Wireless Dome Camera', description: 'Easy to install with wireless connectivity.', img: menuImg4 },
     { id: 5, name: 'Panoramic CCTV Camera', description: '360-degree coverage with panoramic view.', img: menuImg5 },
     { id: 5, name: 'Panoramic CCTV Camera', description: '360-degree coverage with panoramic view.', img: menuImg6 },
-];
+    ];
 
 const Carousel = () => {
     return ( 
@@ -53,21 +53,3 @@ export default Carousel;
 
 
 
-
-// import menuImg from '../assets/img/menuImg.png'; // Replace with actual camera images
-// import menuImg1 from '../assets/img/menuImg1.png'; // Replace with actual camera images
-// import menuImg2 from '../assets/img/menuImg2.png'; // Replace with actual camera images
-// import menuImg3 from '../assets/img/menuImg3.png'; // Replace with actual camera images
-// import menuImg4 from '../assets/img/menuImg4.png'; // Replace with actual camera images
-// import menuImg5 from '../assets/img/menuImg5.png'; // Replace with actual camera images
-// import menuImg6 from '../assets/img/menuImg6.png'; // Replace with actual camera images
-
-
-// const cameras = [
-//     { id: 1, name: 'HD Security Camera', description: 'Crystal clear video with full HD resolution.', img: menuImg },
-//     { id: 1, name: 'HD Security Camera', description: 'Crystal clear video with full HD resolution.', img: menuImg1 },
-//     { id: 2, name: 'Outdoor Camera Pro', description: 'Durable and weather-resistant for outdoor surveillance.', img: menuImg2 },
-//     { id: 3, name: 'Night Vision Camera', description: 'Enhanced visibility even in complete darkness.', img: menuImg3 },
-//     { id: 4, name: 'Wireless Dome Camera', description: 'Easy to install with wireless connectivity.', img: menuImg4 },
-//     { id: 5, name: 'Panoramic CCTV Camera', description: '360-degree coverage with panoramic view.', img: menuImg5 },
-//     { id: 6, name: 'Smart Home Camera', description: 'Integrated with smart home systems for seamless control.', img: menuImg6 },
