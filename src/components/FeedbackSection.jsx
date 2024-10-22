@@ -3,8 +3,10 @@ import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 import { FaStar, FaRegStar } from 'react-icons/fa'; // Icons for ratings
 import { motion } from 'framer-motion';
 
-const testimonialsData = [
-  {
+const testimonialsData =[
+   
+    {
+        
     id: 1,
     name: 'John Doe',
     avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
@@ -82,7 +84,10 @@ const FeedbackSection = () => {
   };
 
   return (
-    <div className="bg-gray-50 py-16 px-4 md:px-8 space-y-16">
+    <div className="bg-gray-100 py-16 px-4 md:px-8 space-y-16">
+          <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
+          What People Say About Us
+        </h2>
       {testimonials.map((testimonial, index) => (
         <motion.section
           key={testimonial.id}
